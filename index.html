@@ -22,7 +22,7 @@
 
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="main-nav">
         <div class="container-fluid justify-content-end">
           <button
             class="navbar-toggler"
@@ -41,26 +41,20 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#projects">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#about">About me</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                  >Disabled</a
-                >
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main>
+    <main data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="0" tabindex="0">
       <section
         id="welcome"
         class="bg-success d-flex justify-content-center align-items-center p-5"
@@ -96,13 +90,15 @@
                     class="card-img-top"
                     alt="..."
                   />
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column align-items-center justify-content-around">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <ul class="d-flex p-0 flex-row flex-wrap justify-content-center">
+                      <li class="badge bg-secondary m-1">Ruby on rails</li>
+                  <li class="badge bg-secondary m-1">css</li>
+                  <li class="badge bg-secondary m-1">Javascript</li>
+                  <li class="badge bg-secondary m-1">html</li>
+                    </ul>
+                    <a href="#" class="btn btn-success">Go somewhere</a>
                   </div>
                 </div>
               </div>
@@ -266,6 +262,47 @@
             </div>
           </div>
         </div>
+      </section>
+      <section id="contact" class="d-flex flex-column justify-content-center align-items-center p-5">
+        <div
+        class="container d-flex justify-content-center align-items-center flex-row"
+      >
+      <div class="row row-cols-auto gx-4">
+        <div class="col-md-6 col-sm-12">
+          <p class="fs-4 fw-bold">
+            I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label invisible">Email address</label>
+              <input type="text" class="form-control" id="exampleInputName" name="name"
+              maxlength="30"
+              placeholder="Full name"
+              required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label invisible">Email address</label>
+              <input type="email" class="form-control" id="example-input-email" name="email"
+              maxlength="30"
+              placeholder="Email"
+              required>
+            </div>
+            <div class="mb-3 d-flex flex-column">
+              <label for="exampleInputTextarea" class="form-label invisible">Email address</label>
+              <textarea
+                  name="message"
+                  placeholder="Enter text here"
+                  maxlength="500" id="example-input-message"
+                  required
+                ></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+      </div>
       </section>
     </main>
     <footer>
